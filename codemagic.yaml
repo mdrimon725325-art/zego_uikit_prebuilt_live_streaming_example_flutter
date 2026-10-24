@@ -1,0 +1,10 @@
+workflows:
+  android-workflow:
+    name: Android Workflow
+    working_directory: live_streaming
+    scripts:
+      - name: Build Android APK
+        script: |
+          flutter build apk --debug
+    artifacts:
+      - live_streaming/build/app/outputs/flutter-apk/*.apk
